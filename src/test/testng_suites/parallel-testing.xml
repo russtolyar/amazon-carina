@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--        variant to start methods in different threads-->
+<!--<suite name="Parallel-test-method Suite" parallel="methods" thread-count="1">-->
+
+<!--        variant to start tests in different threads-->
+<suite name="Parallel-test-method Suite" parallel="tests" thread-count="3">
+
+	<test name="Test-method test Chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.solvd.carina.amazon.AmazonWebTest"/>
+		</classes>
+	</test>
+
+	<test name="Test-method test FireFox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.solvd.carina.amazon.AmazonWebTest"/>
+		</classes>
+	</test>
+
+	<test name="Test-method test Safari">
+		<parameter name="browser" value="safari"></parameter>
+		<classes>
+			<class name="com.solvd.carina.amazon.AmazonWebTest"/>
+		</classes>
+	</test>
+
+</suite>
